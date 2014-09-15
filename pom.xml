@@ -14,6 +14,16 @@
 		<spring-context-version>3.2.2.RELEASE</spring-context-version>
 	</properties>
 
+<repositories>
+    <repository>
+      <id>google-api-services</id>
+      <url>https://google-api-client-libraries.appspot.com/mavenrepo</url>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+</repositories>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -26,12 +36,12 @@
 			<version>${spring-context-version}</version>
 		</dependency>
 		
-<!-- 		<dependency>
+ 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>
 			<version>2.5</version>
 			<scope>provided</scope>
-		</dependency> -->
+		</dependency>
 		
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -49,6 +59,25 @@
 			<artifactId>slf4j-log4j12</artifactId>
 			<version>${slf4jVersion}</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>com.google.apis</groupId>
+			<artifactId>google-api-services-bigquery</artifactId>
+			<version>v2-rev167-1.19.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.google.oauth-client</groupId>
+			<artifactId>google-oauth-client</artifactId>
+			<version>1.19.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.google.http-client</groupId>
+			<artifactId>google-http-client-jackson</artifactId>
+			<version>1.19.0</version>
+		</dependency>
+
 	</dependencies>
 
 
@@ -76,5 +105,6 @@
 			</plugin>
 		</plugins>
 	</build>
+
 
 </project>
