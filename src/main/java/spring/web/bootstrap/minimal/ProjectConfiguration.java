@@ -15,8 +15,8 @@ public class ProjectConfiguration extends WebMvcConfigurerAdapter {
 	
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		registry.addResourceHandler("/css/**").addResourceLocations("/resources/bootstrap/css/");
-		registry.addResourceHandler("/js/**").addResourceLocations("/resources/bootstrap/js/");
+		registry.addResourceHandler("/bootstrap/**").addResourceLocations("/resources/bootstrap/");		
+		registry.addResourceHandler("/datatables-1.10.6/**").addResourceLocations("/resources/datatables-1.10.6/");
  	}
 	
 	@Bean
